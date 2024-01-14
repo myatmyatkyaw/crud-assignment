@@ -14,7 +14,7 @@
                     <label for="inputname" class="col-form-label">Phone Model <small class="text-danger">*</small></label>
                 </div>
                 <div class="col-auto">
-                    <input type="text" id="inputname" class="form-control @error('model') is-invalid @enderror" name="model" value="{{ old('model') }}">
+                    <input type="text" id="inputname" class="form-control @error('model') is-invalid @enderror" name="model" value="{{ $product->model }}">
                     @error('model')
                         <div class="text-danger">*{{$message}}</div>
                     @enderror
@@ -24,7 +24,7 @@
                     <label for="inputcolor" class="col-form-label">Color <small class="text-danger">*</small></label>
                 </div>
                 <div class="col-auto">
-                    <input type="text" id="inputcolor" class="form-control @error('color') is-invalid @enderror" name="color" value="{{old('color')}}">
+                    <input type="text" id="inputcolor" class="form-control @error('color') is-invalid @enderror" name="color" value="{{$product->color}}">
                     @error('color')
                         <div class="text-danger">*{{$message}}</div>
                     @enderror
@@ -34,7 +34,7 @@
                     <label for="inputprice" class="col-form-label">Price <small class="text-danger">*</small></label>
                 </div>
                 <div class="col-auto">
-                    <input type="number" id="inputprice" class="form-control @error('price') is-invalid @enderror" name="price" value="{{old('price')}}">
+                    <input type="number" id="inputprice" class="form-control @error('price') is-invalid @enderror" name="price" value="{{$product->price}}">
                     @error('price')
                         <div class="text-danger">*{{$message}}</div>
                     @enderror
@@ -44,7 +44,7 @@
                     <label for="inputdate" class="col-form-label">Released Date <small class="text-danger">*</small></label>
                 </div>
                 <div class="col-auto">
-                    <input type="number" id="inputdate" class="form-control @error('released_date') is-invalid @enderror" name="released_date" value="{{old('released_date')}}">
+                    <input type="number" id="inputdate" class="form-control @error('released_date') is-invalid @enderror" name="released_date" value="{{$product->released_date}}">
                     @error('released_date')
                         <div class="text-danger">*{{$message}}</div>
                     @enderror

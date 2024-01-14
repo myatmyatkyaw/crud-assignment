@@ -21,7 +21,7 @@
       <th scope="col">Color</th>
       <th scope="col">Price</th>
       <th scope="col">Released Date</th>
-      <th scope="col">Action</th>
+      
 
     </tr>
   </thead>
@@ -33,24 +33,7 @@
       <td>{{$product->color}}</td>
       <td>{{$product->price}}</td>
       <td>{{$product->released_date}}</td>
-      <td >
-                            
-          <a href="{{ route('product.edit',$product->id) }}" class="btn btn-outline-dark" >
-              <i class="fas fa-pencil-alt"> </i>  
-          </a>
-
-          <a href="{{ route('product.show',$product->id) }}" class="btn btn-outline-dark" >
-                                          <i class="fas fa-info"> </i>  
-                                        </a>                
-                        
-          <form action="{{ route('product.destroy',$product->id) }}" method="post" class="d-inline-block">
-            @method('delete')
-            @csrf
-                             
-          <button class="btn btn-outline-dark"><i class="fas fa-trash-alt"></i></button>
-                                  
-                           
-          </form>
+      
     </tr>
  
   </tbody>
